@@ -1,0 +1,33 @@
+.selects{
+    width: 522px;
+    margin: 0 auto;
+    height: 25px;
+    padding-bottom: 35px;
+}
+
+@media (max-width: 510px) {
+    .selects{
+        max-width: 130px;
+        padding-bottom: 70px;
+    }
+}
+
+
+.category{
+    float: left;
+}
+
+.sortBy{
+    float: right;
+}
+.selects span{
+    font-family: Montserrat, serif;
+    font-size: 13px;
+}
+
+.selects select{
+    width: 130px;
+    height: 25px;
+    color: #565656;
+    font-family: Corbel, serif;
+}

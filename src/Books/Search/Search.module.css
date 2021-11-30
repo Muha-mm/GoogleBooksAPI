@@ -1,0 +1,113 @@
+.search{
+    height: 230px;
+    /*background-color: #004c2d;*/
+    /*margin-bottom: 10px;*/
+}
+
+h1{
+    font-family: Montserrat, serif;
+    display: block;
+    font-size: 28px;
+    width: 260px;
+    margin: 15px auto;
+    color: #f19f72;
+    /*background-color: black;*/
+}
+
+.search form{
+    width: 520px;
+    margin: 12px auto;
+    /*background-color: black;*/
+    /*margin: 20px 0 10px 253px;*/
+}
+
+
+
+.search textarea{
+    background: #e8ffd0;
+    line-height: 30px;
+    padding: 10px;
+    font-family:'Montserrat', Times, serif ;
+    width: 450px;
+    height: 30px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    /*background: #e5e5e5;*/
+    resize: none;
+}
+/*@media (max-width: 1032px) {*/
+/*    .search input{*/
+/*        width: 350px;*/
+/*    }*/
+/*}*/
+
+
+.search textarea::-webkit-input-placeholder {
+    /*padding-top: 6px;*/
+    font-size: 14px;
+    color: #000000;
+}
+
+.SButton {
+    font-family: Broadway, serif;
+    position: absolute;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: #ffe289;
+    outline: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+.SButton:before {
+    font-size: 20px;
+    color: #3b3b3b;
+}
+.SButton:active{
+    font-size: 15px;
+}
+
+.SButton {
+    background-position: center;
+    transition: background 0.3s;
+}
+.SButton:hover {
+    background: #ff9e36 radial-gradient(circle, transparent 1%, #ff9e36 1%) center/15000%;
+}
+.SButton:active {
+    background-color: #cd4300;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+.results{
+    box-sizing: border-box;
+    height: 30px;
+    width: 120px;
+    margin: 0 auto;
+    font-family: Montserrat, serif;
+    font-size: 14px;
+    color: #414141;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+    border: #9b9b9b solid 1px;
+}
+
+@media (max-width: 510px) {
+    .search input{
+        max-width: 200px;
+    }
+    .search form{
+        max-width: 250px;
+    }
+    h1{
+        max-width: 230px;
+    }
+    .results{
+
+    }
+}

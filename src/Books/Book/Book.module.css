@@ -1,0 +1,65 @@
+.book{
+    display: inline-block;
+    vertical-align: middle;
+    font-family: AlergiaNormal,"Segoe UI","San Francisco",sans-serif;
+    padding: 7px;
+    margin: 0 10px 14px 14px;
+    max-width: 210px;
+    min-height: 315px;
+    max-height: 315px;
+    background-color: #fff4f0;
+    border-radius: 10px;
+}
+
+
+.image{
+    min-height: 186px;
+    max-height: 198px;
+}
+
+.image img{
+    max-width: 110px;
+    margin: 10px 10px 50px 50px;
+    box-shadow: #b5b5b5 10px 10px 15px;
+}
+
+
+.info{
+    padding: 7px;
+    width: 100%;
+}
+
+.info a{
+    text-decoration: none;
+}
+
+.author{
+    color: #949494;
+    margin-top: 2px;
+    max-width: 197px;
+    font-size: 14px;
+    max-height: 40px;
+    overflow: hidden;
+}
+
+
+.name{
+    color: #004c2d;
+    padding: 0;
+    line-height: 20px;
+    width: 197px;
+    margin: 3px 0 0 0 ;
+    max-height: 45px;
+    overflow: hidden;
+    font-size: 15.8px;
+}
+.category{
+    font-size: 12px;
+    padding: 0 2px;
+    display: inline-block;
+    border-radius: 10px;
+    border: #a9a9a9 solid 1px;
+    margin-bottom: 5px;
+    color: #949494;
+}
+
