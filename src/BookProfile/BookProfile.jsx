@@ -12,9 +12,8 @@ const BookProfile = (props) => {
 
                     <img className={c.bookImage}
                          src={
-                             props.bookProfile.imageLinks !== undefined ?
-                             props.bookProfile.imageLinks.medium || props.bookProfile.imageLinks.thumbnail : null
-                         } alt=""
+                             `https://books.google.com/books/content?id=${props.id}&printsec=frontcover&img=1&zoom=3&source=gbs_api`
+                         }
                     />}
                 </div>
                 <div className={c.bookInfo}>

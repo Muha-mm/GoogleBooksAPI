@@ -17,7 +17,8 @@ class BookProfileContainer extends React.Component{
     }
 
     render() {
-        return <BookProfile bookProfile={this.props.bookProfile} isFetching = {this.props.isFetching}/>
+        return <BookProfile bookProfile={this.props.bookProfile} isFetching = {this.props.isFetching}
+                            id={this.props.match.params.id}/>
     }
 }
 
