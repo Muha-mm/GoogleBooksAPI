@@ -1,6 +1,7 @@
 import React from "react";
 import c from './Search.module.css'
 import Selects from "./Selects/Selects";
+import Preloader from "../../assets/Preloader/Preloader";
 const Search = (props) => {
     return (
         <div className={c.search}>
@@ -21,9 +22,10 @@ const Search = (props) => {
 
             <Selects selectCategory = {props.selectCategory} selectSortBy = {props.selectSortBy}/>
 
-            {props.resultsCount===null?null:
-                <p className={c.results}>results: {props.resultsCount}</p>}
 
+            {props.isFetching && props.resultsCount === null?<Preloader/>:
+                props.resultsCount===null?null:
+                <p className={c.results}>results: {props.resultsCount}</p>}
         </div>
     )
 }

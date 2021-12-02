@@ -5,9 +5,9 @@ const instance =axios.create({
 })
 
 export const booksAPI = {
-    getBooks(title, subject, orderBy='relevance', startIndex = 0, maxResults = 30){
+    getBooks(title_subject, orderBy='relevance', startIndex = 0, maxResults = 30){
         return instance
-            .get(`?q={title:${title},subject:${subject}}&orderBy=${orderBy}&startIndex=${startIndex}&maxResults=${maxResults}&key=AIzaSyB2bAqZigmD5Tmx4_KqgEd5Vamtbz9pDu8`)
+            .get(`?q=${title_subject}&orderBy=${orderBy}&startIndex=${startIndex}&maxResults=${maxResults}&key=AIzaSyAYRwMBI0z_39QhdabZkGlFxzCBD81qDHk`)
             .then(response=>{
                 return response.data
             });
@@ -20,3 +20,4 @@ export const booksAPI = {
             })
     }
 };
+

@@ -19,15 +19,16 @@ const Books = (props) => {
                 <Search newSearchText = {props.newSearchText} resultsCount = {props.resultsCount}
                         pressEnter = {props.pressEnter} changeSearchText = {props.changeSearchText}
                         selectCategory = {props.selectCategory} selectSortBy = {props.selectSortBy}
-                        onButton = {props.onButton}
+                        onButton = {props.onButton} isFetching = {props.isFetching}
                 />
 
                 <div>{booksElements}</div>
 
                 <div>
-                    {props.isFetching?<Preloader/> :
-                        (props.resultsCount < 40 || props.resultsCount === 0 ||
-                            props.resultsCount-props.startIndex<40) ?
+                    { (props.isFetching && props.resultsCount !==null) ?
+                        <div className={c.preloader}><Preloader/></div> :
+                        (props.resultsCount < 30 || props.resultsCount === 0 ||
+                            props.resultsCount-props.startIndex<30) ?
                             null : <MoreBooks onButton = {props.onMoreBooksButton}/>}
                 </div>
         </div>

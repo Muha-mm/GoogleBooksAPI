@@ -54,6 +54,7 @@
     font-size: 15.8px;
 }
 .category{
+    max-width: 192px;
     font-size: 12px;
     padding: 0 2px;
     display: inline-block;

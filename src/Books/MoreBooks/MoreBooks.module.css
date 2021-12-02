@@ -6,14 +6,17 @@
 .loadMoreBooks {
     border-radius: 122px;
     font-family: Montserrat, serif;
+    font-weight: bold;
     font-size: 17px;
     width: 220px;
     height: 40px;
     border: none;
     background: #ffe289;
     outline: none;
-    color: #000000;
+    color: #cd794b;
     cursor: pointer;
+    border-right: #ffb563 4px solid;
+    border-left: #ffb563 4px solid;
 }
 
 
@@ -23,5 +26,5 @@
     transition: background 0.3s;
 }
 .loadMoreBooks:hover {
-    background: #ffb96b radial-gradient(circle, transparent 1%, #ffb96b 1%) center/15000%;
+    background: #ffb563 radial-gradient(circle, transparent 1%, #ffb563 1%) center/15000%;
 }

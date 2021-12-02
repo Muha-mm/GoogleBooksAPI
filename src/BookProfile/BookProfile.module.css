@@ -3,27 +3,27 @@
     display: grid;
     grid-template-areas:
     "Im bI";
-    grid-template-columns: 33% 1fr;
+    grid-template-columns: 30% 1fr;
     grid-gap: 2vw;
-    height: 430px;
-    width: 900px;
+    min-height: 366px;
+    max-height: 500px;
+    width: 880px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 10px 0;
 }
 
 .pageTitle{
-    color: #f19f72;
-    padding-top: 20px;
+    margin: 20px auto;
+    width: 380px;
+    color: #ff936b;
     font-size: 23px;
     font-family: Montserrat, serif;
-    text-align: center;
-    margin: 0;
 
 }
 
 .image{
     text-align: center;
-    height: 370px;
+    height: 365px;
     grid-area: Im;
     border-radius: 40px;
     background-color: #ffba93;
@@ -31,7 +31,10 @@
 .bookInfo{
     grid-area: bI;
     padding: 20px;
+    max-height: 500px;
     background-color: #e8ffd0;
+    overflow-y: scroll;
+    word-wrap:break-word
 }
 .title{
     font-size: 19px;
@@ -43,13 +46,24 @@
 }
 
 .description{
-    /*max-height: 310px;*/
-    overflow: hidden;
     margin-top: 15px;
 }
 
+.bookInfo::-webkit-scrollbar {
+    width: 0.2em;
+    height: 100px;
+}
+
+.bookInfo::-webkit-scrollbar-thumb {
+    background-color: #f5aa99;
+    /*outline: 1px solid #f19f72;*/
+    border-radius: 100px;
+}
+
+
 .categories{
-    padding: 5px;
+    /*padding: 5px;*/
+    padding: 0 5px;
     border-radius: 10px;
     background: #ffc4aa;
     font-size: 14px;
@@ -58,9 +72,13 @@
 
 .bookImage{
     box-shadow: #1f1f1f 4px 7px 16px;
-    margin: 30px 0;
-    max-width: 230px;
+    margin: 28px 0;
+    max-width: 220px;
     border-radius: 13px;
     min-height: 305px;
     max-height: 305px;
+}
+
+.preloader{
+    margin-top: 165px;
 }

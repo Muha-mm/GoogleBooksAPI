@@ -1,7 +1,5 @@
 .search{
     height: 230px;
-    /*background-color: #004c2d;*/
-    /*margin-bottom: 10px;*/
 }
 
 h1{
@@ -11,14 +9,11 @@ h1{
     width: 260px;
     margin: 15px auto;
     color: #f19f72;
-    /*background-color: black;*/
 }
 
 .search form{
     width: 520px;
     margin: 12px auto;
-    /*background-color: black;*/
-    /*margin: 20px 0 10px 253px;*/
 }
 
 
@@ -33,18 +28,12 @@ h1{
     border: none;
     font-size: 14px;
     outline: none;
-    /*background: #e5e5e5;*/
     resize: none;
 }
-/*@media (max-width: 1032px) {*/
-/*    .search input{*/
-/*        width: 350px;*/
-/*    }*/
-/*}*/
+
 
 
 .search textarea::-webkit-input-placeholder {
-    /*padding-top: 6px;*/
     font-size: 14px;
     color: #000000;
 }

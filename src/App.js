@@ -7,7 +7,7 @@ function App(props) {
     <div className="app">
         <Route   path= '/' exact
                  render={()=> <BooksContainer/> }/>
-            <Route    path = '/:id'
+            <Route    path = '/:id' exact
                    render={()=> <BookProfileContainer/> }/>
 
 

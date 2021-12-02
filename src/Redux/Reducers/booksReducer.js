@@ -1,6 +1,6 @@
 const initialState = {
     newBooksText: '',
-    subject: '',
+    subject: 'all',
     sortBy: 'relevance',
     startIndex: 0,
     resultsCount: null,
