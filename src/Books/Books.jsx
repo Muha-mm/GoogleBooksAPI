@@ -10,7 +10,8 @@ const Books = (props) => {
     let booksElements = props.books.map((b)=>{
         return <Book key = {b.id} title = {b.volumeInfo.title}
                      authors ={b.volumeInfo.authors} id = {b.id}
-            subject={b.volumeInfo.categories===undefined ? 'not found': b.volumeInfo.categories[0]}/>
+            subject={b.volumeInfo.categories===undefined ? 'not found': b.volumeInfo.categories[0]}
+                     photo = {b.volumeInfo.imageLinks===undefined ? null : b.volumeInfo.imageLinks.thumbnail}/>
     })
 
     return (
