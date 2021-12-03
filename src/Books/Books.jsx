@@ -15,14 +15,14 @@ const Books = (props) => {
     })
 
     return (
-        <div className={c.books}>
+        <div className={c.booksPage}>
                 <Search newSearchText = {props.newSearchText} resultsCount = {props.resultsCount}
                         pressEnter = {props.pressEnter} changeSearchText = {props.changeSearchText}
                         selectCategory = {props.selectCategory} selectSortBy = {props.selectSortBy}
                         onButton = {props.onButton} isFetching = {props.isFetching}
                 />
 
-                <div>{booksElements}</div>
+                <div className={c.books}>{booksElements}</div>
 
                 <div>
                     { (props.isFetching && props.resultsCount !==null) ?

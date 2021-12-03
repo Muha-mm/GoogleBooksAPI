@@ -6,7 +6,7 @@ const Search = (props) => {
     return (
         <div className={c.search}>
 
-            <h1>Search for books</h1>
+            <div className={c.title}>Search for books</div>
 
             <form >
                 <textarea placeholder="Search here..."
@@ -21,6 +21,7 @@ const Search = (props) => {
 
 
             <Selects selectCategory = {props.selectCategory} selectSortBy = {props.selectSortBy}/>
+            <hr className={c.hr}/>
 
 
             {props.isFetching && props.resultsCount === null?<Preloader/>:

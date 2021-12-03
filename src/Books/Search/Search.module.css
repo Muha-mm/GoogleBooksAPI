@@ -2,14 +2,18 @@
     height: 230px;
 }
 
-h1{
+.title{
     font-family: Montserrat, serif;
+    text-align: center;
     display: block;
+    /*font-weight: 1000;*/
     font-size: 28px;
-    width: 260px;
+    /*width: 270px;*/
     margin: 15px auto;
-    color: #f19f72;
+    color: #c4523c;
 }
+
+
 
 .search form{
     width: 520px;
@@ -19,7 +23,7 @@ h1{
 
 
 .search textarea{
-    background: #e8ffd0;
+    background: #ffb999;
     line-height: 30px;
     padding: 10px;
     font-family:'Montserrat', Times, serif ;
@@ -35,7 +39,7 @@ h1{
 
 .search textarea::-webkit-input-placeholder {
     font-size: 14px;
-    color: #000000;
+    color: #320000;
 }
 
 .SButton {
@@ -45,9 +49,9 @@ h1{
     width: 50px;
     height: 50px;
     border: none;
-    background: #ffe289;
+    background: #e97f68;
     outline: none;
-    color: #000000;
+    color: #f3f3f3;
     cursor: pointer;
 }
 
@@ -73,30 +77,38 @@ h1{
 }
 
 .results{
-    box-sizing: border-box;
+    /*color: crimson;*/
+    /*font-family: Glasgow, serif;*/
     height: 30px;
     width: 120px;
     margin: 0 auto;
     font-family: Montserrat, serif;
-    font-size: 14px;
-    color: #414141;
+    font-size: 17px;
+    color: #d76767;
+    padding-top: 4px;
     border-radius: 8px;
-    padding: 5px;
     text-align: center;
-    border: #9b9b9b solid 1px;
+    font-weight: bold;
+}
+
+.hr{
+    height: 1px;
+    border: none;
+    width: 520px;
+    background-color: #bababa;
 }
 
 @media (max-width: 510px) {
-    .search input{
+    .search textarea{
         max-width: 200px;
     }
     .search form{
         max-width: 250px;
     }
     h1{
-        max-width: 230px;
+        /*max-width: 230px;*/
     }
-    .results{
-
+    .hr{
+        inline-size: 0;
     }
 }

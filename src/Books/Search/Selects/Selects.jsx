@@ -13,7 +13,6 @@ const Selects = (props) => {
                     <option value="history">history</option>
                     <option value="medical">medical</option>
                     <option value="poetry">poetry</option>
-                    <option value="fiction">fiction</option>
                 </select>
             </div>
 

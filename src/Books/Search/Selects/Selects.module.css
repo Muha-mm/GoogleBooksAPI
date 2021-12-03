@@ -1,14 +1,14 @@
 .selects{
     width: 522px;
     margin: 0 auto;
-    height: 25px;
+    height: 20px;
     padding-bottom: 35px;
 }
 
 @media (max-width: 510px) {
     .selects{
+        padding-bottom: 48px;
         max-width: 130px;
-        padding-bottom: 70px;
     }
 }
 
