@@ -4,6 +4,20 @@
 .preloader{
     padding: 13px;
 }
-.books{
-    /*margin-top: 15px;*/
+
+.booksPng{
+    width: 120px;
+}
+
+.booksPngDiv{
+    text-align: center;
+    margin: 20px auto;
+}
+
+.booksPngText{
+    margin: 5px 0 0 5px;
+    font-family: Montserrat, serif;
+    color: #ff736f;
+    text-align: center;
+    font-size: 14px;
 }
