@@ -13,7 +13,7 @@ const Search = (props) => {
                           required
                        onKeyPress={(e)=>
                            {if (e.key === 'Enter'){props.onButton(); e.preventDefault()}}}
-                       value={props.newSearchText}
+                       value={props.newBooksText}
                        onChange={props.changeSearchText}
                        />
                     <button onClick={props.onButton} type="button" className={c.SButton}> > </button>

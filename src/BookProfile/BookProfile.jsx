@@ -12,7 +12,7 @@ const BookProfile = (props) => {
 
                     <img className={c.bookImage}
                          src={
-                             `https://books.google.com/books/content?id=${props.id}&printsec=frontcover&img=1&zoom=3&source=gbs_api`
+                             `https://books.google.com/books/content?id=${props.match.params.id}&printsec=frontcover&img=1&zoom=3&source=gbs_api`
                          } alt={'book Photo'}
                     />}
                 </div>
@@ -25,9 +25,7 @@ const BookProfile = (props) => {
                             props.bookProfile.description.replace(/<[^>]+>/g, '')}
                     </div>
 
-                    <span className={c.catContainer}>
                     <div className={c.categories}>{props.bookProfile.categories}</div>
-                </span>
 
                 </div>
 

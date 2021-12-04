@@ -1,11 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
-import {
-    changeSearchText, setBooks,
-    selectCategory, selectSortBy, moreBooks, toggleIsFetching
-} from '../Redux/Reducers/booksReducer';
+import {changeSearchText, setBooks, getBooks, getMoreBooks} from '../Redux/Reducers/booksReducer';
 import Books from "./Books";
-import {booksAPI} from "../Api/api";
 
 class BooksContainer extends React.Component {
 
@@ -13,44 +9,22 @@ class BooksContainer extends React.Component {
         let subject
         this.props.subject === 'all' ? subject = '}' : subject = ',subject:' + this.props.subject + '}'
         let title_subject = `{title:${this.props.newBooksText}${subject}`
-        this.props.setBooks([], null)
-        if (this.props.newBooksText.trim() === '') {
-            alert('Введите подзаголовок перед поиском')
-        } else {
-            this.props.toggleIsFetching(true)
-            booksAPI.getBooks(title_subject, this.props.sortBy, 0)
-                .then((response) => {
-                    this.props.toggleIsFetching(false)
-                    if (response.totalItems === 0) {
-                        this.props.setBooks([], response.totalItems)
-                    } else {
-                        this.props.setBooks(response.items, response.totalItems)
-                    }
-                })
-        }
+
+        this.props.newBooksText.trim() === ''?
+            alert('Введите подзаголовок перед поиском'):
+            this.props.getBooks(title_subject, this.props.sortBy)
     }
 
     onMoreBooksButton = () => {
         let subject
         this.props.subject === 'all' ? subject = '}' : subject = ',subject:' + this.props.subject + '}'
         let title_subject = `{title:${this.props.newBooksText}${subject}`
-        this.props.toggleIsFetching(true)
-        booksAPI.getBooks(title_subject, this.props.sortBy, this.props.startIndex + 30)
-            .then((response) => {
-                this.props.toggleIsFetching(false)
-                this.props.moreBooks(response.items)
-            })
+
+        this.props.getMoreBooks(title_subject, this.props.sortBy, this.props.startIndex)
     }
 
     render() {
-        return <Books
-            newSearchText={this.props.newBooksText} resultsCount={this.props.resultsCount}
-            pressEnter={this.props.pressEnter} changeSearchText={this.props.changeSearchText}
-            selectCategory={this.props.selectCategory} selectSortBy={this.props.selectSortBy}
-            subject={this.props.subject} onButton={this.onButton} books={this.props.books}
-            startIndex={this.props.startIndex} onMoreBooksButton={this.onMoreBooksButton}
-            isFetching={this.props.isFetching}
-        />
+        return <Books {...this.props} onButton={this.onButton} onMoreBooksButton={this.onMoreBooksButton}/>
     }
 }
 
@@ -66,28 +40,6 @@ let mapStateToProps = (state) => ({
 
 })
 
-let mapDispatchToProps = (dispatch) => ({
-
-    moreBooks: (books) => {
-        dispatch(moreBooks(books))
-    },
-    setBooks: (books, resultsCount) => {
-        dispatch(setBooks(books, resultsCount))
-    },
-    changeSearchText: (e) => {
-        dispatch(changeSearchText(e.target.value))
-    },
-    selectCategory: (e) => {
-        dispatch(selectCategory(e.target.value));
-    },
-    selectSortBy: (e) => {
-        dispatch(selectSortBy(e.target.value));
-    },
-    toggleIsFetching: (isFetching) => {
-        dispatch(toggleIsFetching(isFetching))
-    }
-
-})
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(BooksContainer)
+export default connect(mapStateToProps,
+    {setBooks, changeSearchText, getBooks, getMoreBooks})
+(BooksContainer)

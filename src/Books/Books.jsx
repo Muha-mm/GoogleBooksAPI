@@ -7,7 +7,6 @@ import Preloader from "../assets/Preloader/Preloader";
 import books from './../assets/books.png'
 
 const Books = (props) => {
-
     let booksElements = props.books.map((b) => {
         return <Book key={b.id} title={b.volumeInfo.title}
                      authors={b.volumeInfo.authors} id={b.id}
@@ -17,7 +16,7 @@ const Books = (props) => {
 
     return (
         <div className={c.booksPage}>
-            <Search newSearchText={props.newSearchText} resultsCount={props.resultsCount}
+            <Search newBooksText={props.newBooksText} resultsCount={props.resultsCount}
                     pressEnter={props.pressEnter} changeSearchText={props.changeSearchText}
                     selectCategory={props.selectCategory} selectSortBy={props.selectSortBy}
                     onButton={props.onButton} isFetching={props.isFetching}
