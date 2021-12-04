@@ -1,6 +1,13 @@
 import React from "react";
 import {connect} from "react-redux";
-import {changeSearchText, setBooks, getBooks, getMoreBooks} from '../Redux/Reducers/booksReducer';
+import {
+    changeSearchText,
+    setBooks,
+    getBooks,
+    getMoreBooks,
+    selectSortBy,
+    selectCategory
+} from '../Redux/Reducers/booksReducer';
 import Books from "./Books";
 
 class BooksContainer extends React.Component {
@@ -9,6 +16,7 @@ class BooksContainer extends React.Component {
         let subject
         this.props.subject === 'all' ? subject = '}' : subject = ',subject:' + this.props.subject + '}'
         let title_subject = `{title:${this.props.newBooksText}${subject}`
+        this.props.setBooks([], null)
 
         this.props.newBooksText.trim() === ''?
             alert('Введите подзаголовок перед поиском'):
@@ -41,5 +49,5 @@ let mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps,
-    {setBooks, changeSearchText, getBooks, getMoreBooks})
+    {setBooks, changeSearchText, getBooks, getMoreBooks, selectSortBy, selectCategory})
 (BooksContainer)
