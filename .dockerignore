@@ -1,7 +1,8 @@
 node_modules
-#build
 .dockerignore
 Dockerfile
 .idea
 .git
-#Dockerfile.prod
+
+#dumtgeni/booksapp repo
+#https://hub.docker.com/repository/docker/dumtgeni/booksapp
